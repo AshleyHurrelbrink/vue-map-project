@@ -214,41 +214,31 @@ export default Vue.extend({
 <style scoped>
 .map-container {
   position: relative;
-
   width: 100%;
-
   height: 100vh;
 }
 
 #map {
   width: 100%;
-
   height: 100%;
 }
 
+/* LEFT PANEL (desktop) */
 .left-overlay {
   position: absolute;
-
   top: 20px;
-
   left: 20px;
-
   width: 320px;
-
   padding: 20px;
-
   background: white;
-
   border-radius: 16px;
-
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-
   z-index: 10;
 }
 
+/* RIGHT POPUP (desktop) */
 .right-popup {
   position: absolute;
-
   top: 20px;
   right: 20px;
   width: 320px;
@@ -259,6 +249,7 @@ export default Vue.extend({
   z-index: 10;
 }
 
+/* controls */
 .controls {
   display: flex;
   flex-direction: column;
@@ -285,5 +276,35 @@ button {
 
 button:hover {
   opacity: 0.9;
+}
+
+/* ===================== */
+/* MOBILE RESPONSIVE FIX */
+/* ===================== */
+@media (max-width: 768px) {
+  .left-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+  }
+
+  .right-popup {
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+  }
+
+  input, button {
+    font-size: 16px;
+  }
+
+  button {
+    min-height: 44px;
+  }
 }
 </style>
