@@ -288,18 +288,24 @@ button:hover {
     left: 10px;
     right: 10px;
     width: auto;
+    max-height: 45vh;
+    overflow-y: auto;
   }
 
   .right-popup {
     position: absolute;
-    top: auto;
-    bottom: 10px;
     left: 10px;
     right: 10px;
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    top: auto;
     width: auto;
+    max-height: 40vh;
+    overflow-y: auto;
+    z-index: 10;
   }
 
-  input, button {
+  input,
+  button {
     font-size: 16px;
   }
 
